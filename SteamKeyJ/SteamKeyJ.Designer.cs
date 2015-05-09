@@ -100,7 +100,7 @@
             this.MaximizeBox = false;
             this.Name = "SteamKeyJ";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SteamKeyJ (v1.0 beta)";
+            this.Text = "SteamKeyJ (v1.1 beta)";
             this.Resize += new System.EventHandler(this.SteamKeyJ_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -45,6 +45,10 @@ namespace SteamKeyJ
             {
                 KeyRecogniser.Unhook();
             };
+
+            //check if 'hidden' was passed in, start minimized
+            if(Environment.GetCommandLineArgs().Contains("hidden", StringComparer.OrdinalIgnoreCase))
+                this.WindowState = FormWindowState.Minimized;
         }
 
         void AssignDictionary()
@@ -107,10 +111,15 @@ namespace SteamKeyJ
 
         private void SteamKeyJ_Resize(object sender, EventArgs e)
         {
+            MinimizeWindow();            
+        }
+
+        private void MinimizeWindow()
+        {
             if (FormWindowState.Minimized == this.WindowState)
             {
                 notifyIcon1.Visible = true;
-                 
+
                 notifyIcon1.ShowBalloonTip(100, "SteamKeyJ Minimised", "SteamKeyJ is running in the background", ToolTipIcon.Info);
                 this.Hide();
             }
