@@ -47,7 +47,7 @@ namespace SteamKeyJ
             };
 
             //check if 'hidden' was passed in, start minimized
-            if(Environment.GetCommandLineArgs().Contains("hidden", StringComparer.OrdinalIgnoreCase))
+            if (Environment.GetCommandLineArgs().Contains("-hidden", StringComparer.OrdinalIgnoreCase))
                 this.WindowState = FormWindowState.Minimized;
         }
 
